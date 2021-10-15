@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+DIR="/var/html"
+
 main() {
 
   local domain_list
@@ -16,7 +19,7 @@ main() {
     exit 1
   fi
 
-  ls -1 /var/www/vhosts > "$domain_list"
+  ls -1 $DIR > "$domain_list"
   while read -r domain; do
     if [[ ! -d /etc/letsencrypt/archive/www."$domain" && ! -d /etc/letsencrypt/archive/"$domain" ]]; then
       certbot -n --apache -d "$domain" -d www."$domain"
