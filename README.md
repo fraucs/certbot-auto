@@ -1,6 +1,6 @@
 # certbot-auto
 
-This tool allows you to automate the installation of SSL certificates.
+This tool allows you to automate the installation of Let's Encrypt SSL certificates.
 
 ## Requirements
 
